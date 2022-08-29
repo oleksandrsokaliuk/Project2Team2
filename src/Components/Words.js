@@ -16,6 +16,7 @@ function Words() {
                 //console.log(res.data[0].definition);
             })
             .catch((error) => console.log(error));
+            setIsVisible(false);
 
     };
     const visible = function () {
@@ -24,7 +25,6 @@ function Words() {
 
     return (
         <div>
-
             {word}   <br />
             <button type="button" onClick={newWord}>
                 {' '}
@@ -35,8 +35,7 @@ function Words() {
             {' '}
             {isVisible ? 'Close Help' : 'Open Help'}{' '}
             </button>
-
-      </div >
+      </div>
     );
 }
 export default Words;
