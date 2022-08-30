@@ -4,7 +4,7 @@ import Clock from "./components/Clock.js";
 function App() {
   return (
     <div className="App">
-      <Clock className="main-clock" />
+      <Clock />
     </div>
   );
 }

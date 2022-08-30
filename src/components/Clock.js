@@ -1,8 +1,14 @@
 import React from "react";
-import "../index.css";
+import "./clock.css";
 
 function Clock() {
+  let [style, setStyle] = React.useState({
+    backgroundImage: "linear-gradient(black, transparent)",
+  });
+  const getPadTime = (time) => time.toString().padStart(2, "0");
   let [time, changeTime] = React.useState(120);
+  const minutes = getPadTime(Math.floor(time / 60));
+  const seconds = getPadTime(time - minutes * 60);
   let [isCounting, setIsCounting] = React.useState(true);
   React.useEffect(() => {
     const createInterval = setInterval(() => {
@@ -15,12 +21,26 @@ function Clock() {
 
   const handleStop = () => {
     setIsCounting(false);
+    setStyle({
+      backgroundImage: "none",
+    });
   };
 
   return (
-    <div>
-      <h1>{time} </h1>
-      <button onClick={handleStop}>The word is guessed</button>
+    <div className="main__container">
+      <div className="cont">
+        <div className="spinner" style={style}></div>
+        <div className="numbers">
+          <span className="timer__item">{minutes} </span>
+          <span className="timer__item">: </span>
+          <span className="timer__item">{seconds}</span>
+        </div>
+      </div>
+      <div className="button">
+        <button className="timer__button" onClick={handleStop}>
+          The word is guessed
+        </button>
+      </div>
     </div>
   );
 }
