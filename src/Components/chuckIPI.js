@@ -13,13 +13,12 @@ function NewChuck() {
         //console.log(res.data.value);
       })
       .catch((error) => console.log(error));
-      
+
   };
 
   return (
     <div>
-
-      {joke}   <br /> 
+      {joke} <br />
       <button type="button" onClick={newChuck}>
         {' '}
         New Chuck{' '}

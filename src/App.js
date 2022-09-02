@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <NewChuck />
       <Words />
-      <br/>
-      <Input />      
+      <br />
+      <Input />
     </div>
   );
 }
