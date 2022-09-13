@@ -5,8 +5,8 @@
   text-align: center;
   font-weight: bold;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 25%;
+  transform: translate(-45%, -45%);
   border: 2px solid #aaa;
   border-radius: 50%;
   overflow: hidden;

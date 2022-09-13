@@ -19,6 +19,7 @@ function NewChuck() {
   return (
     <div>
       {joke} <br />
+      
       <button type="button" onClick={newChuck}>
         {' '}
         New Chuck{' '}
